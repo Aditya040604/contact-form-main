@@ -11,6 +11,7 @@
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
+    <link rel="stylesheet" href="style.css" />
 
     <title>Frontend Mentor | Contact form</title>
 
@@ -29,21 +30,21 @@
     <main>
       <h1>Contact Us</h1>
       <form>
-        <div>
+        <div class="form-group">
           <label for="fname">First Name</label>
           <input type="text" name="fname" id="fname" required />
         </div>
-        <div>
+        <div class="form-group">
           <label for="lname">Last Name</label>
           <input type="text" name="lname" id="lname" required />
         </div>
-        <div>
+        <div class="form-group">
           <label for="email">Email Address</label>
           <input type="email" name="email" id="email" required />
         </div>
         <fieldset>
           <legend>Query Type</legend>
-          <div>
+          <div class="form-group">
             <input
               type="radio"
               name="query"
@@ -52,7 +53,7 @@
             />
             <label for="gquery">General Query</label>
           </div>
-          <div>
+          <div class="form-group">
             <input
               type="radio"
               name="query"
@@ -62,11 +63,11 @@
             <label for="squery">Support Query</label>
           </div>
         </fieldset>
-        <div>
+        <div class="form-group">
           <label for="message">Message</label>
           <textarea name="message" id="message" required> </textarea>
         </div>
-        <div>
+        <div class="form-group">
           <input type="checkbox" name="consent" id="consent" required />
           <label for="consent">I consent to being contacted by the team</label>
         </div>
