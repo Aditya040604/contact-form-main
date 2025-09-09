@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Contact form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Contact Us</h1>
+      <form>
+        <div>
+          <label for="fname">First Name</label>
+          <input type="text" name="fname" id="fname" required />
+        </div>
+        <div>
+          <label for="lname">Last Name</label>
+          <input type="text" name="lname" id="lname" required />
+        </div>
+        <div>
+          <label for="email">Email Address</label>
+          <input type="email" name="email" id="email" required />
+        </div>
+        <fieldset>
+          <legend>Query Type</legend>
+          <div>
+            <input
+              type="radio"
+              name="query"
+              id="gquery"
+              value="general query"
+            />
+            <label for="gquery">General Query</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              name="query"
+              id="squery"
+              value="support query"
+            />
+            <label for="squery">Support Query</label>
+          </div>
+        </fieldset>
+        <div>
+          <label for="message">Message</label>
+          <textarea name="message" id="message" required> </textarea>
+        </div>
+        <div>
+          <input type="checkbox" name="consent" id="consent" required />
+          <label for="consent">I consent to being contacted by the team</label>
+        </div>
+        <button>Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
