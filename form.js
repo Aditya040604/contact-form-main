@@ -30,6 +30,11 @@ form.addEventListener("submit", function (e) {
   });
   if (isValid) {
     // send form data
+    const formData = new FormData(form);
+    console.log("Form submitted with: ");
+    for (const [name, value] of formData.entries()) {
+      console.log(`${name}: ${value}`);
+    }
     form.reset();
   } else form.querySelector(":invalid").focus();
 });
