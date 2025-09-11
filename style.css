@@ -81,6 +81,8 @@
   }
   .form-group {
     display: grid;
+    /* when we add error message content below the field then the next field will expand to match the size of this field as error msg is added. so to stick to size of the content in the box , the below property helps. u can understand better by commenting the below line and play with form to know the difference. */
+    grid-auto-rows: min-content;
   }
 
   fieldset:has([required]) legend,
@@ -139,5 +141,15 @@
     &:focus-visible {
       background-color: var(--dark-teal);
     }
+  }
+
+  input:user-invalid {
+    border-color: var(--red);
+  }
+  .error-message {
+    color: var(--red);
+  }
+  .error-message:empty {
+    display: none;
   }
 }

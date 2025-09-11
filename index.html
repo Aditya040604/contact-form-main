@@ -25,22 +25,32 @@
         color: hsl(228, 45%, 44%);
       }
     </style>
+    <script src="form.js" defer></script>
   </head>
   <body>
     <main class="contact">
       <h1>Contact Us</h1>
-      <form>
+      <form novalidate>
         <div class="form-group">
           <label for="fname">First Name</label>
           <input type="text" name="fname" id="fname" required />
+          <span class="error-message" aria-live="polite"></span>
         </div>
         <div class="form-group">
           <label for="lname">Last Name</label>
           <input type="text" name="lname" id="lname" required />
+          <span class="error-message" aria-live="polite"></span>
         </div>
         <div class="form-group span-all">
           <label for="email">Email Address</label>
-          <input type="email" name="email" id="email" required />
+          <input
+            type="email"
+            data-error="Please enter a valid email address"
+            name="email"
+            id="email"
+            required
+          />
+          <span class="error-message" aria-live="polite"></span>
         </div>
         <fieldset class="span-all">
           <legend>Query Type</legend>
@@ -64,14 +74,23 @@
             />
             <label for="squery">Support Query</label>
           </div>
+          <span class="error-message" aria-live="polite"></span>
         </fieldset>
         <div class="form-group span-all">
           <label for="message">Message</label>
-          <textarea name="message" id="message" required> </textarea>
+          <textarea name="message" id="message" required></textarea>
+          <span class="error-message" aria-live="polite"></span>
         </div>
         <div class="form-group span-all">
-          <input type="checkbox" name="consent" id="consent" required />
+          <input
+            type="checkbox"
+            data-error="To submit this form, please consent to being contacted"
+            name="consent"
+            id="consent"
+            required
+          />
           <label for="consent">I consent to being contacted by the team</label>
+          <span class="error-message" aria-live="polite"></span>
         </div>
         <button class="span-all">Submit</button>
       </form>
