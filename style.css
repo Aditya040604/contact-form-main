@@ -113,7 +113,27 @@
 
   .form-group:has([type="radio"], [type="checkbox"]) {
     display: flex;
+    flex-wrap: wrap;
     gap: 1ch;
+  }
+
+  .form-group:has([type="checkbox"]) input[type="checkbox"] {
+    order: 1;
+  }
+  .form-group:has([type="checkbox"]) label {
+    order: 2;
+    flex: 1;
+  }
+  .form-group:has([type="checkbox"]) .error-message {
+    order: 3;
+    flex-basis: 100%;
+    margin-left: 0;
+  }
+
+  .checkbox-wrapper {
+    display: flex;
+    gap: 1ch;
+    /* align-items: flex-start; */
   }
 
   .form-group:has([type="radio"]) {
